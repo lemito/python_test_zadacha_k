@@ -25,21 +25,12 @@ for i in someDict.keys():
             float(someDict[i][2]) / float(someDict[i][3])
         )
         newTmp[i] = round(preRes, 8)
-print(newTmp)
 
 # Вывод результатов
 for i in newTmp.keys():
     if math.isclose(newTmp[i], 1.00000000):
         print(
             f"{i}: Основание {(float(someDict[i][0]) / float(someDict[i][1]))} и степень {float(someDict[i][2]) / float(someDict[i][3])}."
-        )
-        print(newTmp[i])
-        print(
-            round(
-                (float(someDict[i][0]) / float(someDict[i][1]))
-                ** (float(someDict[i][2]) / float(someDict[i][3]))
-            ),
-            0,
         )
 
 del someDict
